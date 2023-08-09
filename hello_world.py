@@ -1,12 +1,14 @@
 
 def fib(n):
-    if n==0:
-        return 0
-    elif n==1:
+    if n == 0:
         return 1
-    elif n==2:
+    elif n == 1:
         return 1
-    elif n<0:
-        return print("You are Wrong Nana!")
     else:
-        return fib(n-1)+fib(n-2)
+        print(f"Returning {n}+ fib{n-1} + fib{n-2}")
+        return n+fib(n-1) + fib(n-2)
+
+inputNumber = int(input("Enter a number to calculate Fibonacci:"));
+print(f"Calculating Fibonacci of number:{inputNumber}")
+value = fib(inputNumber)
+print(f"Fibonacci of {inputNumber} is {value}")
